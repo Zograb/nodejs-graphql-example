@@ -1,0 +1,11 @@
+.DS_STORE
+config
+node_modules
+dist
+coverage
+logs
+*.log
+yarn-debug.log*
+yarn-error.log*
+.idea
+.vscode
