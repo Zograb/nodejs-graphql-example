@@ -5,12 +5,12 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 
 import schema from './graphql';
-import { mongoURI } from './config/keys';
+import keys from './config/keys';
 
 const app = express();
 const PORT = process.env.PORT || '4000';
 
-mongoose.connect(mongoURI, { useCreateIndex: true, useNewUrlParser: true })
+mongoose.connect(keys.mongoURI, { useCreateIndex: true, useNewUrlParser: true })
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
 
